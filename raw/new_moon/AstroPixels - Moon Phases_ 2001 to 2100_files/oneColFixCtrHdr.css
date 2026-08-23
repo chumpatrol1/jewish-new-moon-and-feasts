@@ -1,0 +1,391 @@
+@charset "UTF-8";
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #1B1B1B;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #666;
+}
+
+/* Links */
+
+a:link {
+   color: #CC2222;   /*  #C91F16  */
+}
+a:visited {
+   color: #BB7700; // #EEAD00;
+}
+a:hover, a:active {
+   color: #EE9999;   /*  #CC6666  */
+}
+img.center {display: block; margin: 0 auto;
+}
+h1.smallcaps, h2.smallcaps, h3.smallcaps, h4.smallcaps {
+font-variant:small-caps;
+}
+p.xxsmall {
+font-size: xx-small;
+}
+.indent25, p.indent25, pre.indent25 {
+   padding-left: 25px;
+}
+.indent50, p.indent50, pre.indent50 {
+   padding-left: 50px;
+}
+.indent100, p.indent100, pre.indent100 {
+   padding-left: 100px;
+}
+hr.blue {
+   color: #8AF;
+   background-color: #8AF;
+   width: 700px;
+   border: 0px;
+   height: 4px;
+   text-align: center;
+   padding: 0pt; /* 10pt or 12pt if not */
+}
+hr.ltblue {
+   color: #EEF;
+   background-color: #EEF;
+   width: 700px;
+   border: 0px;
+   height: 4px;
+   text-align: center;
+   padding: 0pt; /* 10pt or 12pt if not */
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ID Definitions */
+
+#container {
+	width: 1000px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #8AF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#container1000 {
+	width: 1000px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #8AF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#container950 {
+	width: 950px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #8AF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#container900 {
+	width: 900px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #8AF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#container825 {
+	width: 825px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #8AF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#container825 h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: x-large;
+	color: #000;
+} 
+#container825 h2 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: large;
+	color: #000;
+} 
+#container825 h3 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: medium;
+	color: #000;
+} 
+#container825 h4 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: small;
+	color: #000;
+} 
+#container825 h5 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: x-small;
+	color: #000;
+} 
+#header {
+	background: #000; 
+	padding: 0 10px 0 10px;  /* t,b,r,l (inside) - padding matches left alignment of elements in divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+}
+#header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* tb, rl (inside) - using padding instead of margin will allow you to keep the element away from the edges of the div */
+	text-align: center; /* this overrides the text-align: center on the body element. */
+	color: #000;
+}
+#header p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 30px; /* tb, rl - padding on this element will create space, just as the margin would have, without the margin collapse issue */
+	text-align: center; /* this overrides the text-align: center on the body element. */
+	font-size: x-small;
+}
+#mainContent {
+	padding: 0 0px; /* tb, rl - remember that padding is the inside space the div box and margin is the space outside the div box */
+	background: #8AF;
+	color: #000;
+	font-size: small;
+} 
+#mainContent h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: x-large;
+	color: #000;
+} 
+#mainContent h2 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this not necessary as that also avoids the margin collapse */
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: large;
+	color: #000;
+} 
+#mainContent h3 {
+	margin: 0; 
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: medium;
+	color: #000;
+} 
+#mainContent h4 {
+	margin: 0; 
+	padding: 10px 0 0px 0;     /* t,r,b,l  -  margin is outside space */
+	font-size: small;
+	color: #000;
+} 
+#footer {
+	padding: 0 10px; /* tb, rl - this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#111111;
+}
+#footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 30px; /* tb, rl - padding on this element will create space, just as the margin would have, without the margin collapse issue */
+	text-align: center; /* this overrides the text-align: center on the body element. */
+	font-size: small;
+}
+#smallfooter p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 30px; /* tb, rl - padding on this element will create space, just as the margin would have, without the margin collapse issue */
+	text-align: center; /* this overrides the text-align: center on the body element. */
+	font-size: xx-small;
+	color: #888;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Class Definitions */
+
+
+.pbox0 {
+	padding: 10px 10px;   /* tb, rl  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:10px 0px 30px 0px;   /* t,r,b,l  -  margin is outside space */
+} 
+.pbox1 {
+	padding: 10px 50px;   /* tb, rl  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:10px 0px 30px 0px;   /* t,r,b,l  -  margin is outside space */
+} 
+.pbox1a {
+	padding: 10px 50px;   /* tb, rl  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:0px 20px 0px 20px;   /* t,r,b,l  -  margin is outside space */
+} 
+.pbox1b {
+	padding: 10px 50px;   /* tb, rl  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:0px 70px 0px 70px;   /* t,r,b,l  -  margin is outside space */
+} 
+.pbox2 {
+	padding:10px 40px 10px 40px;   /* t,r,b,l  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:20px 40px 30px 40px;   /* t,r,b,l  -  margin is the outside space */
+} 
+.pbox3 {
+	padding:10px 40px 10px 40px;   /* t,r,b,l  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:20px 80px 30px 80px;   /* t,r,b,l  -  margin is outside space */
+} 
+.pbox4 {
+	padding:10px 40px 10px 40px;   /* t,r,b,l  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	margin:20px 120px 30px 120px;   /* top, right, bottom, left  -  margin is outside space */
+} 
+
+.pbox900 {
+	padding: 10px 50px;   /* tb, rl  -  padding is inside space */
+	background: #EEF;
+	color: #000;
+	font-size: small;
+	max-width: 900px;
+	margin:10px 0px 30px 0px;   /* t,r,b,l  -  margin is outside space */
+} 
+
+
+/* Main Page Headings */
+
+.yellowbox1 {
+   border:0;
+   color: #FFFFFF;
+   background: #FF8;
+   padding:0px 20px 10px 20px;   /* t,r,b,l  -  padding is inside space */
+   letter-spacing: 0px;
+   /* vertical-align: middle; */
+   text-align: center;
+   /* text-transform: uppercase; */
+   font-variant:small-caps;
+}
+
+h1.headbox1, h2.headbox1 {
+   border:0;
+   color: #FFFFFF;
+   padding:1px 10px 1px 10px;   /* t,r,b,l  -  padding is inside space */
+   letter-spacing: 0px;
+   vertical-align: middle;
+}
+
+h1.headbox2, h2.headbox2 {
+   border:0;
+   color: #FFFFFF;
+   padding:1px 10px 1px 10px;   /* t,r,b,l  -  padding is inside space */
+	margin-left: 10px;
+	margin-right: 10px;
+   /* width:710px; 730 - 20 (for the right and left padding) */
+   letter-spacing: 0px;
+   vertical-align: middle;
+}
+
+h1.headbox1 {
+   font: 12pt/30px Arial, Helvetica, sans-serif;
+   font-weight: 700; /* bold; 400; normal; */
+   background: #77F;
+   height:30px;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+h2.headbox1 {
+   letter-spacing: 0px;
+   vertical-align: middle;
+   background: #ff8;
+   text-align: center;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Tables */
+
+table {
+   margin-top: 10px;
+   margin-bottom: 10px;
+} 
+
+table.datataballcenter {
+   text-align: center;
+}
+
+table.datatab, table.datataballcenter, table.datatab2 {
+   border: 1px solid #666666;
+   margin-bottom:15px;
+   font-size: 10pt;
+   vertical-align: top;
+}
+
+table.datatab thead tr td, table.datataballcenter thead tr td, table.datatab2 thead tr td { 
+   background:#ffd;
+   color:#000;
+   font-weight:bold;
+   padding: 3px 8px;    /* tb, rl  -  padding is inside space */
+   border-left: 1px solid #fff;
+   vertical-align: top;
+   text-align: center;
+}
+
+table.datatab thead tr.subhead td, table.datataballcenter thead tr.subhead td, table.datatab2 thead tr.subhead td { 
+   background:#ccf;
+   color:#000;
+   font-weight:normal;
+   padding: 3px 8px;    /* tb, rl  -  padding is inside space */
+   border-left: 1px solid #fff;
+   vertical-align: top;
+   text-align: center;
+}
+
+table.datatab thead tr.theading td, table.datataballcenter thead tr.theading td,table.datatab2 thead tr.theading td { 
+   background:#ff8;
+   color:#000;
+   font-weight: 700;
+   font-size: 14pt;
+   /* text-decoration: underline; */
+   padding: 3px 8px;     /* tb, rl  -  padding is inside space */
+   border-left: 1px solid #fff;
+   vertical-align: top;
+   text-align: center;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+table.datatab tbody tr td, table.datataballcenter tbody tr td {
+   font-size: 10pt;
+   padding: 3px 8px;     /* tb, rl  -  padding is inside space */
+   border-left: 1px solid #D9D9D9;
+   vertical-align: top;
+}
+
+table.datatab2 tbody tr td {
+   font-size: 10pt;
+   padding: 1px 4px;     /* tb, rl  -  padding is inside space */
+   border-left: 1px solid #D9D9D9;
+   vertical-align: top;
+}
+
+table.datatab tbody tr.odd td, table.datataballcenter tbody tr.odd td, table.datatab2 tbody tr.odd td {
+   background-color: #eef;
+   vertical-align: top;
+   text-align: center;
+}
+table.datatab tbody tr.even td, table.datataballcenter tbody tr.even td, table.datatab2 tbody tr.even td {
+   background-color: #ddf;
+   vertical-align: top;
+   text-align: center;
+}
+.APcenter8 {
+   text-align: center;
+   font-size: 8pt;
+   padding:1px;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+
