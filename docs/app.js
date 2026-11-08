@@ -155,8 +155,8 @@ function initUI(moons) {
       if (n === 0) input.checked = true;
       input.addEventListener("change", () => renderYear(idx));
       optsBox.append(el("label", { class: "start-option" }, input,
-        el("span", {}, fmt(m.day1),
-          el("small", {}, `Begins at sunset ${fmt(addDays(m.day1, -1))}`))));
+        el("span", {}, `Begins at sunset ${fmt(addDays(m.day1, -1))}`,
+          el("small", {}, `Day 1: ${fmt(m.day1)}`))));
     });
     renderYear(idxs[0]);
   }
@@ -169,23 +169,23 @@ function initUI(moons) {
     ftbody.replaceChildren(...feasts(months).map(f => el("tr", {},
       el("td", { class: "name" }, f.name, f.high ? tag("High day", "high") : null),
       el("td", {}, f.bib),
-      el("td", {}, f.end ? fmtRange(f.start, f.end) : fmt(f.start)),
-      el("td", {}, fmt(addDays(f.start, -1))))));
+      el("td", {}, fmt(addDays(f.start, -1))),
+      el("td", {}, f.end ? fmtRange(f.start, f.end) : fmt(f.start)))));
     feastsCard.hidden = false;
 
     const mtbody = document.getElementById("months");
     const rows = months.map((m, i) => el("tr", {},
       el("td", {}, String(i + 1)),
-      el("td", {}, fmt(m.day1)),
       el("td", {}, fmt(addDays(m.day1, -1))),
+      el("td", {}, fmt(m.day1)),
       el("td", {}, fmtConjunction(m.conjunction_utc))));
     const note = document.getElementById("month13-note");
     if (month13) {
       const m = month13.moon;
       rows.push(el("tr", { class: "month13" },
         el("td", {}, "13", tag(month13.status === "required" ? "Required" : "Possible", "flag")),
-        el("td", {}, fmt(m.day1)),
         el("td", {}, fmt(addDays(m.day1, -1))),
+        el("td", {}, fmt(m.day1)),
         el("td", {}, fmtConjunction(m.conjunction_utc))));
       note.textContent = month13.status === "required"
         ? "A 13th month is required: this sighting falls before Mar 1, so the next year can't start yet."
