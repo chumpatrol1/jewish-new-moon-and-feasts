@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Moons &amp; Feasts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>New Moons &amp; Feasts</h1>
+      <p class="sub">Calculated new moon sightings for Jerusalem with Torah feast dates, 2024–2099.</p>
+    </header>
+
+    <section class="card">
+      <label for="year">Calendar year</label>
+      <select id="year"></select>
+
+      <fieldset id="starts">
+        <legend>Start of the year: new moon sightings from Mar 1 to Apr 30</legend>
+        <div id="start-options"></div>
+      </fieldset>
+    </section>
+
+    <p id="message" class="message" hidden></p>
+
+    <section class="card" id="feasts-card" hidden>
+      <h2>Feasts</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Feast</th><th>Biblical date</th><th>Daylight date</th><th>Begins at sunset</th></tr>
+          </thead>
+          <tbody id="feasts"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="months-card" hidden>
+      <h2>New Moons</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Month</th><th>Day 1 (daylight)</th><th>Begins at sunset</th><th>Conjunction (UT)</th></tr>
+          </thead>
+          <tbody id="months"></tbody>
+        </table>
+      </div>
+      <p id="month13-note" class="note" hidden></p>
+    </section>
+
+    <footer class="note">
+      Days begin at sunset. The crescent is sighted on the evening given in
+      <code>processed/jewish_new_moon_timings.csv</code>, and day 1 of the month is the following day. The Wave Sheaf is the Sunday during Unleavened
+      Bread, and Pentecost is the 50th day counted from it.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
